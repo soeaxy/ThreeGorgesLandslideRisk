@@ -1,8 +1,12 @@
 # ThreeGorgesLandslideRisk
 三峡库区滑坡易发性评价
 
-## 成员
+## 开发语言
 
-- 宋英旭
-- 张格格
-- 董佳慧
+Python
+
+## 用到的库
+
+```python
+numpy,pandas,matplotlib
+```
