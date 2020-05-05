@@ -47,20 +47,14 @@ def dataPrepare(filePath,flag=0):
     data.dropna(axis=0, how='any', inplace=True)
     if flag==0:
         colName = ['TGRA_DEM_P', 'Aspect_rec', 'Slope', 'water', 'road', 'curvature']
-        x_columns = [x for x in data.columns if x not in ['Class','GeoID','FID','lon','lat','Class','LSM2019']]
         X = data[colName]
         y = data['Class']
         GeoID = data['GeoID']
-        print(data.head())
-        print(x_columns)
         return X, y, GeoID
     else :
         colName = ['TGRA_DEM_P', 'Aspect_rec', 'Slope', 'water', 'road', 'curvature']
-        x_columns = [x for x in data.columns if x not in ['Class','GeoID','FID','lon','lat','Class','LSM2019']]
         X = data[colName]
         GeoID = data['GeoID']
-        print(x_columns)
-        print(data.head())
         return X, GeoID
 
 def trainModel(X,y):
