@@ -13,4 +13,4 @@ numpy,pandas,matplotlib
 
 ## 在Google Earth Engine中运行
 
-[ThreeGorgesLandslideRisk in GEE](https://code.earthengine.google.com/6cb7f84e54279eb10b13322f85ec8124#workspace)
+[ThreeGorgesLandslideRisk in Google Earth Engine](https://code.earthengine.google.com/6cb7f84e54279eb10b13322f85ec8124#workspace)
