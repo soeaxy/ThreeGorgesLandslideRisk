@@ -12,8 +12,8 @@ function rmCloud(image) {
     return image.updateMask(mask);
   }
   
-  //缩放
-  function scaleImage(image) {
+//缩放
+function scaleImage(image) {
     var time_start = image.get("system:time_start");
     image = image.multiply(0.0001);
     image = image.set("system:time_start", time_start);
