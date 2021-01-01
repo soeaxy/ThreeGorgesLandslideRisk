@@ -222,16 +222,88 @@ print(Rain_MultiBand);
 
 // 计算日最大降雨量
 var GPMrangeMax = Rain_MultiBand.reduce(ee.Reducer.max());
-Export.image(GPMrangeMax, 'GPMrangeMaxSignalDAy', {});
+// Export.image(GPMrangeMax, 'GPMrangeMaxSignalDAy', {});
 
-// 导出数据，酌情使用
-Export.image(GPMrangeSum1,'GPMrangeSum1');
-Export.image(GPMrangeSum2,'GPMrangeSum2');
-Export.image(GPMrangeSum3,'GPMrangeSum3');
-Export.image(GPMrangeSum4,'GPMrangeSum4');
-Export.image(GPMrangeSum5,'GPMrangeSum5');
-Export.image(GPMrangeSum6,'GPMrangeSum6');
-Export.image(GPMrangeSum7,'GPMrangeSum7');
+Export.image.toDrive({
+  image: GPMrangeMax.toFloat(),
+  description: 'GPMrangeMaxSignalDAy',
+  maxPixels:1e13,
+  scale: 1000,
+  folder: 'ThreeGorgesRainNasa',
+  region: NG.geometry()
+});
+
+// Export.image(GPMrangeSum1,'GPMrangeSum1');
+// Export.image(GPMrangeSum2,'GPMrangeSum2');
+// Export.image(GPMrangeSum3,'GPMrangeSum3');
+// Export.image(GPMrangeSum4,'GPMrangeSum4');
+// Export.image(GPMrangeSum5,'GPMrangeSum5');
+// Export.image(GPMrangeSum6,'GPMrangeSum6');
+// Export.image(GPMrangeSum7,'GPMrangeSum7');
+
+Export.image.toDrive({
+  image: GPMrangeSum1.toFloat(),
+  description: 'GPMrangeSum1',
+  maxPixels:1e13,
+  scale: 1000,
+  folder: 'ThreeGorgesRainNasa',
+  region: NG.geometry()
+});
+
+Export.image.toDrive({
+  image: GPMrangeSum2.toFloat(),
+  description: 'GPMrangeSum2',
+  maxPixels:1e13,
+  scale: 1000,
+  folder: 'ThreeGorgesRainNasa',
+  region: NG.geometry()
+});
+
+Export.image.toDrive({
+  image: GPMrangeSum3.toFloat(),
+  description: 'GPMrangeSum3',
+  maxPixels:1e13,
+  scale: 1000,
+  folder: 'ThreeGorgesRainNasa',
+  region: NG.geometry()
+});
+
+Export.image.toDrive({
+  image: GPMrangeSum4.toFloat(),
+  description: 'GPMrangeSum4',
+  maxPixels:1e13,
+  scale: 1000,
+  folder: 'ThreeGorgesRainNasa',
+  region: NG.geometry()
+});
+
+Export.image.toDrive({
+  image: GPMrangeSum5.toFloat(),
+  description: 'GPMrangeSum5',
+  maxPixels:1e13,
+  scale: 1000,
+  folder: 'ThreeGorgesRainNasa',
+  region: NG.geometry()
+});
+
+Export.image.toDrive({
+  image: GPMrangeSum6.toFloat(),
+  description: 'GPMrangeSum6',
+  maxPixels:1e13,
+  scale: 1000,
+  folder: 'ThreeGorgesRainNasa',
+  region: NG.geometry()
+});
+
+Export.image.toDrive({
+  image: GPMrangeSum7.toFloat(),
+  description: 'GPMrangeSum7',
+  maxPixels:1e13,
+  scale: 1000,
+  folder: 'ThreeGorgesRainNasa',
+  region: NG.geometry()
+});
+
 
 // CHIRPS - Calculate rainfall in date range and clips
 var rCHIRPS = chirps.select("precipitation").filterDate(dateRange);
